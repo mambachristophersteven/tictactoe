@@ -1,0 +1,81 @@
+@font-face {
+    font-family: myFont;
+    src: url(./FingerPaint-Regular.ttf);
+}
+*{
+    
+    font-family: myFont;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --maincolor: #F2C14E;
+    --darkmode: #37505c;
+}
+
+body{
+    color: var(--maincolor);
+}
+
+h1{
+    font-size: 54px;
+    text-transform: uppercase;
+}
+
+.container{
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--darkmode);
+}
+
+.gameboard{
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--maincolor);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    cursor: pointer;
+}
+
+.box:nth-child(3n){
+    border-right: none;
+}
+
+.box:nth-child(6)~ .box{
+    border-bottom: none;
+}
+
+button{
+    padding: 10px 20px ;
+    border-radius: 10px;
+    background-color: var(--maincolor);
+    border-color: var(--maincolor);
+    color: var(#333);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+}
